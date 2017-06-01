@@ -1,1 +1,111 @@
-Hello
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calendar</title>
+        <style>
+/*.monthPre{*/
+ /*color: gray;*/
+ /*text-align: center;*/
+/*}*/
+/*.monthNow{*/
+ /*color: blue;*/
+ /*text-align: center;*/
+/*}*/
+/*.dayNow{*/
+ /*border: 2px solid black;*/
+ /*color: #FF0000;*/
+ /*text-align: center;*/
+/*}*/
+/*.calendar td{*/
+ /*htmlContent: 2px;*/
+ /*width: 40px;*/
+/*}*/
+/*.monthNow th{*/
+ /*background-color: #000000;*/
+ /*color: #FFFFFF;*/
+ /*text-align: center;*/
+/*}*/
+/*.dayNames{*/
+ /*background: #0FF000;*/
+ /*color: #FFFFFF;*/
+ /*text-align: center;*/
+/*}*/
+
+/*.calNav{*/
+    /*cursor: pointer;*/
+/*}*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600');
+.calendarHolder {
+    width:220px;
+    max-width: 250px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+}
+.monthName {
+    text-align: center;
+    padding: 2px;
+    background:tomato;
+    color:#fff;
+}
+.table {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    color: #505050;
+    width:100%;
+    border:1px solid #ddd;
+}
+.table tr td {
+    text-align: center;
+    padding: 2px;
+    cursor: pointer;
+    /*border:1px solid #eee;*/
+}
+.table thead tr th {
+    width:calc(100% / 7);
+}
+.table tr td.empty {
+    visibility: hidden;
+}
+
+.table tr td:hover, .table tr td.active {
+    background: tomato;
+    color: #fff;
+}
+.table tr td.notAllowed {
+    cursor: not-allowed;
+    background: #ddd;
+}
+.days {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.dates {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+}
+</style>
+    </head>
+    <body>
+        <input type="text" name="calendar" value="" class="raj">
+        <br/>
+        <br/>
+        <br/>
+        <input type="text" name="calendar" value="" class="raj">
+        <br/>
+        <br/>
+        <br/>
+        <input type="text" name="calendar" value="" class="rajesh">
+        <button id="mycal">Show Calendar</button>
+        <div id="call"></div>
+        <script src="calendar.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            calendar.attach('input');
+//            calendar.addCalendar();
+        </script>
+    </body>
+</html>
